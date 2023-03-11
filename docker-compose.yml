@@ -1,21 +1,21 @@
 version: "3.8"
 
 services:
-  #  client:
-  #    container_name: docker-react-c
-  #    image: docker-react-i
-  #    build:
-  #      context: ./client
-  #    ports:
-  #      - "3000:3000"
-  #
-  #  server:
-  #    container_name: docker-express-c
-  #    image: docker-express-i
-  #    build:
-  #      context: ./server
-  #    ports:
-  #      - "8888:8888"
+  client:
+    container_name: docker-react-c
+    image: docker-react-i
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+
+  server:
+    container_name: docker-express-c
+    image: docker-express-i
+    build:
+      context: ./server
+    ports:
+      - "8888:8888"
 
   db:
     image: postgres

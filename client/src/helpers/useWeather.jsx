@@ -7,10 +7,12 @@ const useGetWeather = () => {
     const [loading, setLoading] = useState(true);
     const { latitude, longitude } = useCurrentPosition();
 
+    const token = 'change_me';
+    
     useEffect(() => {
         const getData = async () => {
             try {
-                const ulr = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=1deca3690565d9d1c063f8ef30915b27`;
+                const ulr = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid={token}}`;
 
                 if (latitude && longitude) {
                     const response = await axios.get(ulr);
